@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Henkilökysely</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="henkilosto.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="keskitettyFormi">
+                <h2>Henkilökysely</h2>
+                <div class="display-none" id="messages"></div>
+                <form>
+                    <table>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Kerro ensin himan itsestäsi, mikä on nimesi ja sukunimesi?</td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Etunimi: *</label></label><input placeholder="Etunimi *" id="name" type="text" size="15" required></td>
+                            <td><label for="secondname">Toinen nimi:</label><input placeholder="Toinen nimi" size="15" id="secondname" type="text"></td>
+                            <td><label for="lastname">Sukunimi: *</label><input placeholder="Sukunimi *" id="lastname" type="text" size="15" required></td>
+                        </tr>
+                        <tr style="height: 10px;"></tr>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Entäs sukupuolesi, haluatko kertoa?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio"name="gender"value="mies"checked><span class="spanit">Mies</span></td>
+                            <td><input type="radio"name="gender"value="nainen"checked><span class="spanit">Nainen</span></td>
+                            <td><input type="radio"name="gender"value="none"checked><span class="spanit">En kerro</span></td>
+                        </tr>
+                            <tr style="height: 10px;"></tr>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Mitäs koodailet?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="codecss" value="CSS"><span class="spanit">CSS:ää</span></td>
+                            <td><input type="checkbox" name="codehtml" value="HTML"><span class="spanit">HTML:ää</span></td>
+                            <td><input type="checkbox" name="codephp" value="PHP"><span class="spanit">PHP:tä</span></td>
+                        </tr>
+                        <tr style="height: 10px;"></tr>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Mitäs haluaisit oppia?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="codecss" value="JavaScript"><span class="spanit">JS:ää</span></td>
+                            <td><input type="checkbox" name="codehtml" value="Java"><span class="spanit">Javaa</span></td>
+                            <td><input type="checkbox" name="codephp" value="python"><span class="spanit">Pythonii</span></td>
+                        </tr>
+                        <tr style="height: 10px;"></tr>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Taggaa suosikkisi seuraaviin kohtiin:</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select>
+                                    <option value="react">React</option>
+                                    <option value="node">NodeJS</option>
+                                    <option value="angular">Angular</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="chrome">Chrome</option>
+                                    <option value="firefox">Firefox</option>
+                                    <option value="safari">Safari</option>
+                                    <option value="opera">Opera</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="macOS">macOS</option>
+                                    <option value="Windows">Windows</option>
+                                    <option value="linux">Linux</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr style="height: 10px;"></tr>
+                        <tr style="text-align: left;">
+                            <td colspan="3">Kuvaile vielä itseäsi ja kiinnostuksen kohteitasi:</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="padding: 10px 40px 10px 10px">
+                                <textarea style="padding-right:10px; padding-left: 10px" name="message" rows="5" cols="50" maxwidth="100px">Tarinaa.</textarea>
+                            </td>
+                        </tr>
+                        <tr style="text-align: right;">
+                            <td colspan="2"><button type="reset">Tyhjennä</button></td>
+                            <td><button type="submit">Lähetä</button></td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="datalist display-none">
+                    <div class="datalist-row">
+                        <h2 id="dataHeading"></h2>
+                        <p>Keräämme tietoja vain koulutustarpeen arvioimista varten, emme luovuta tietoja ulkopuolisille.</p>
+                        <p>Tietojasi säylytetään GDRP asetuksen sääntöjen mukaisesti ja käytetään vain yllä mainuttuun tarkotukseen.</p>
+                        <p>Halutessanne voitte nähdä kaikki teistä kerätyt tietonne <a>henkilökohtaiselta sivultanne</a>.</p>
+                        <button type="button">Takaisin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal loadingModal display-none">
+            <div id="loadingDiv" class="loader"></div>
+        </div>
+        <script type="text/javascript" src="henkilosto.js"></script> 
+    </body>
+</html>
