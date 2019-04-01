@@ -91,7 +91,7 @@ select {
 }
 input, label {
     font-weight: bold;
-    display:block;
+    display: inline-block;
 }
 label {
     margin-left: 5px;
@@ -139,16 +139,18 @@ textarea {
 option {
     border-radius: 10px;
 }
-input[type="radio"], input[type="radio"]>span, input[type="checkbox"], input[type="checkbox"]>span {
+input[type="radio"], input[type="radio"]>label, input[type="checkbox"], input[type="checkbox"]>label {
     display: inline;
 }
 
 @media only screen and (max-width: 600px) {
     tr {
         text-align: left;
-        max-width: 50px;
+        max-width: 100%;
     }
-
+    tbody {
+        width: 85%;
+    }
     td {
         width: 33%;
         height: 10px;
